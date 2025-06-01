@@ -82,5 +82,7 @@
         
     };
 
-    &led_strip {chain-length = <6>;};
+    
 };
+
+&led_strip {chain-length = <6>;};
