@@ -78,5 +78,9 @@
         extra_2 { status = "reserved"; };
 
         extra_3 { status = "reserved"; };
+
+        
     };
+
+    &led_strip {chain-length = <6>;};
 };
