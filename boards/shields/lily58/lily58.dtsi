@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2020 Pete Johanson
  *
@@ -14,10 +13,6 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &kata0510_lily58_layout;
-
-        #address-cells = <1>;
-        #size-cells = <0>;
-        zmk,led-strips = &left_leds, &right_leds;
     };
 
     default_transform: keymap_transform_0 {
@@ -90,19 +85,3 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         prechargep = <0x22>;
     };
 };
-
-&left_leds: led_strip@0 {
-     compatible = "ws2812";
-     label = "LEFT_LEDS";
-     pin = <&gpio0 6 GPIO_ACTIVE_HIGH>;     /* e.g. P0.06, change to your actual data pin */
-     chain-length = <29>;                   /* Number of SK6812 LEDs on left half */
-     status = "okay";
- };
-
- &right_leds: led_strip@1 {
-     compatible = "ws2812";
-     label = "RIGHT_LEDS";
-     pin = <&gpio0 7 GPIO_ACTIVE_HIGH>;     /* e.g. P0.07, change to your actual data pin */
-     chain-length = <29>;                   /* Number of SK6812 LEDs on right half */
-     status = "okay";
- };
