@@ -82,3 +82,7 @@
 };
 
 &led_strip { chain-length = <35>; };
+
+&left_encoder {
+    status = "okay";
+};
