@@ -30,7 +30,7 @@
                            &kp LALT  &mo 1   &kp LGUI  &kp RETURN    &kp SPACE  &kp BACKSPACE  &mo 2   &bl BL_TOG
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
         lower_layer {
@@ -78,11 +78,7 @@
         extra_2 { status = "reserved"; };
 
         extra_3 { status = "reserved"; };
-
-        
     };
-
-    
 };
 
-&led_strip {chain-length = <35>;};
+&led_strip { chain-length = <35>; };
